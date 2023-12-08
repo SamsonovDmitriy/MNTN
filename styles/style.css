@@ -1,0 +1,122 @@
+/* переписать на clamp резиновые элементы */
+
+.main {
+	background-color: #0b1d26;
+}
+
+.accent-color {
+	color: var(--accent-color);
+}
+
+.card-list {
+	display: flex;
+	flex-direction: column;
+	gap: 200px;
+	align-items: center;
+}
+
+.card {
+	font-family: var(--main-font, 'Gilroy');
+	font-weight: var(--main-font-weight, 700);
+	color: var(--main-color, #fff);
+	inline-size: 1462px;
+	block-size: 720px;
+	display: flex;
+	gap: 114px;
+	font-size: 18px;
+	padding-inline-start: 150px;
+}
+
+/* .card:nth-child(even) {
+	padding-inline-start: 0;
+} */
+
+/* этот класс убрать после нахождения оптимального решения */
+.no-padding {
+	padding-inline-start: 0;
+}
+
+.extra-gap {
+	gap: 264px;
+}
+
+.card__text-container {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+	max-inline-size: 632px;
+	position: relative;
+}
+
+.card__text-container::before {
+	content: '01';
+	position: absolute;
+	font-size: 240px;
+	line-height: 240px;
+	opacity: 0.1;
+	inset-inline-start: -148px;
+	inset-block-start: 32px;
+}
+
+.card__text-container:nth-child(2)::before {
+	content: '02';
+}
+
+/* Не получается сменить цифру на последней карточке */
+.card__text-container:nth-child(3)::before {
+	content: '03';
+}
+
+.card__label {
+	font-weight: var(--accent-font-weight);
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	position: relative;
+	margin-inline-start: 97px;
+}
+
+.card__label::before {
+	content: '';
+	display: block;
+	background-color: var(--accent-color);
+	block-size: 2px;
+	inline-size: 72px;
+	position: absolute;
+	inset-block-start: 9px;
+	inset-inline-start: -95px;
+}
+
+.card__title {
+	font-family: var(--accent-font);
+	font-size: 64px;
+	font-weight: var(--title-font-weight);
+}
+
+.card__text {
+	line-height: 32px;
+}
+
+.card__button {
+	position: relative;
+	background-color: transparent;
+	border: none;
+	font-weight: inherit;
+	align-self: flex-start;
+	padding: 0;
+}
+
+.card__button::after {
+	inset-inline-end: -43px;
+	position: absolute;
+	content: '';
+	background-image: url(../svg/arrow_downward.svg);
+	inline-size: 24px;
+	block-size: 16px;
+	inset-block-start: 2px;
+}
+
+.card__picture {
+	block-size: 100%;
+	inline-size: 566px;
+}

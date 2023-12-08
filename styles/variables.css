@@ -1,0 +1,9 @@
+:root {
+	--main-color: #fff;
+	--accent-color: #fbd784;
+  --main-font: 'Gilroy';
+  --accent-font: 'Chronicle Display';
+  --main-font-weight: 700;
+  --accent-font-weight: 800;
+  --title-font-weight: 600;
+}
