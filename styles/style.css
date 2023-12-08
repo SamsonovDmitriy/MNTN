@@ -1,7 +1,7 @@
 /* переписать на clamp резиновые элементы */
 
-.main {
-	background-color: #0b1d26;
+.page {
+	background-color: var(--bg-color, #0b1d26);
 }
 
 .accent-color {
@@ -119,4 +119,58 @@
 .card__picture {
 	block-size: 100%;
 	inline-size: 566px;
+}
+
+/* .сделать грамотный лэйаут по макету */
+
+.footer {
+	color: var(--main-color, #fff);
+	font-family: var(--main-font, 'Gilroy');
+	font-size: 18px;
+	font-weight: var(--footer-font-weight, 500);
+	line-height: 32px; /* 177.778% */
+	margin-block-start: 200px;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	justify-items: center;
+}
+
+.footer__link {
+	text-decoration: none;
+}
+
+.footer__logo-group {
+	display: grid;
+	grid-template-rows: 21% 69%;
+}
+
+.footer__logo {
+	text-transform: uppercase;
+	font-family: var(--accent-font, 'Chronicle Display');
+	font-size: 32px;
+	font-weight: var(--main-font-weight, 700);
+	letter-spacing: 0.32px;
+}
+
+.footer__text {
+	max-inline-size: 303px;
+	font-weight: var(--main-font-weight, 700);
+}
+
+.footer__copyright {
+	opacity: 0.5;
+}
+
+.footer__links-layout {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.footer__title {
+	margin-block-end: 8px;
+	color: var(--accent-color, #fbd784);
+	font-size: 24px;
+	font-weight: var(--main-font-weight, 700);
+	line-height: 32px; /* 133.333% */
 }
